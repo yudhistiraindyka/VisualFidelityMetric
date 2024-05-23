@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from PIL import Image, ImageTk
 import os
+import time  # Import the time module
 import psnr_module
 import ssim_module
 import lpips_module
@@ -74,8 +75,11 @@ class VideoComparisonApp:
         try:
             if self.native_folder and self.upscaled_folder:
                 fps = self.frames_per_second.get()
+                start_time = time.time()  # Start timer
                 psnr_values = self.compare_videos(self.native_folder, self.upscaled_folder, metric="psnr", frames_per_second=fps)
-                self.display_results(psnr_values, "PSNR")
+                end_time = time.time()  # End timer
+                elapsed_time = end_time - start_time
+                self.display_results(psnr_values, "PSNR", elapsed_time)
                 winsound.MessageBeep()  # Play default alert sound
             else:
                 messagebox.showerror("Error", "Please select both video folders.")
@@ -86,8 +90,11 @@ class VideoComparisonApp:
         try:
             if self.native_folder and self.upscaled_folder:
                 fps = self.frames_per_second.get()
+                start_time = time.time()  # Start timer
                 ssim_values = self.compare_videos(self.native_folder, self.upscaled_folder, metric="ssim", frames_per_second=fps)
-                self.display_results(ssim_values, "SSIM")
+                end_time = time.time()  # End timer
+                elapsed_time = end_time - start_time
+                self.display_results(ssim_values, "SSIM", elapsed_time)
                 winsound.MessageBeep()  # Play default alert sound
             else:
                 messagebox.showerror("Error", "Please select both video folders.")
@@ -98,8 +105,11 @@ class VideoComparisonApp:
         try:
             if self.native_folder and self.upscaled_folder:
                 fps = self.frames_per_second.get()
+                start_time = time.time()  # Start timer
                 lpips_values = self.compare_videos(self.native_folder, self.upscaled_folder, metric="lpips", frames_per_second=fps)
-                self.display_results(lpips_values, "LPIPS")
+                end_time = time.time()  # End timer
+                elapsed_time = end_time - start_time
+                self.display_results(lpips_values, "LPIPS", elapsed_time)
                 winsound.MessageBeep()  # Play default alert sound
             else:
                 messagebox.showerror("Error", "Please select both video folders.")
@@ -138,7 +148,7 @@ class VideoComparisonApp:
 
         return metric_values
 
-    def display_results(self, metric_values, metric_name):
+    def display_results(self, metric_values, metric_name, elapsed_time):
         # Calculate the average of the metric values for each second
         frames_per_second = self.frames_per_second.get()
         frames_per_interval = frames_per_second
@@ -156,6 +166,7 @@ class VideoComparisonApp:
         result_text = f"{metric_name} Values (average values for each second):\n"
         for i, value in enumerate(avg_values_per_second):
             result_text += f"Second {i+1}: {value:.4f}\n"
+        result_text += f"\nTime taken: {elapsed_time:.2f} seconds"
         self.result_label.config(text=result_text)
 
 def main():
