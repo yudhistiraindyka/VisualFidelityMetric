@@ -21,7 +21,7 @@ class VideoFrameExtractorApp:
         self.video_path_entry.grid(row=0, column=1, padx=5, pady=5)
 
         # Browse button
-        self.browse_button = tk.Button(master, text="Browse", command=self.browse_video)
+        self.browse_button = tk.Button(master, text="Browse", command=self.browse_video, bg="#4CAF50", fg="white", font=("Arial", 10))
         self.browse_button.grid(row=0, column=2, padx=5, pady=5)
 
         # Extract frames button
