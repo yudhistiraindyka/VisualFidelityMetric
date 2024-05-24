@@ -26,9 +26,9 @@ class VideoComparisonApp:
         self.video_frame.pack(pady=10)
 
         # Buttons for selecting video folders
-        self.select_native_button = tk.Button(self.video_frame, text="Select Native Video Folder", command=self.select_native)
+        self.select_native_button = tk.Button(self.video_frame, text="Select Native Video Folder", command=self.select_native, bg="#4CAF50", fg="white", font=("Arial", 10))
         self.select_native_button.pack(side=tk.LEFT, padx=5)
-        self.select_upscaled_button = tk.Button(self.video_frame, text="Select Upscaled Video Folder", command=self.select_upscaled)
+        self.select_upscaled_button = tk.Button(self.video_frame, text="Select Upscaled Video Folder", command=self.select_upscaled, bg="#4CAF50", fg="white", font=("Arial", 10))
         self.select_upscaled_button.pack(side=tk.LEFT, padx=5)
 
         # Frame for FPS selection
@@ -54,7 +54,7 @@ class VideoComparisonApp:
         self.compare_lpips_button.pack(side=tk.LEFT, padx=5)
 
         # Result label
-        self.result_label = tk.Label(master, text="Result: ", wraplength=700)
+        self.result_label = tk.Label(master, text="Result: ", wraplength=700, font=("Arial", 12, "bold"))
         self.result_label.pack(pady=10)
 
 
