@@ -12,10 +12,11 @@ A program made for comparing images and extracting videos using PSNR, SSIM, and 
 - [Usage](#usage)
   - [Extracting Videos](#extracting-videos)
   - [Comparing Images](#comparing-images)
+  - [Comparing Videos](#comparing-videos)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+- [Acknowledgements](#acknowledgements)
 
 ## Description
 
@@ -85,8 +86,6 @@ This will open the GUI for frame extraction program.
 </p>
 
 
-
-
 ### Comparing images
 
 To compare two images using the provided metrics, use the following command:
@@ -112,3 +111,45 @@ This will open the GUI for image comparison.
 <p align="center">
   <img src="https://github.com/yudhistiraindyka/VisualFidelityMetric/assets/33085123/8bd817e4-4a4f-4b48-b165-490b6b2cec05" alt="Example Image" width="800" />
 </p>
+
+### Comparing videos
+
+To compare videos, make sure the videos are extracted to images first, one in a folder for native, another one in a folder for upscaled, and make sure <i><b> the number of images are the same.</b></i>
+After making sure we've extracted the video, use the following command:
+```
+python src/compare_videos_interval.py
+```
+This will open the GUI for video comparison.
+<p align="center">
+  <img src="https://github.com/yudhistiraindyka/VisualFidelityMetric/assets/33085123/72e1a1ee-64b1-4d04-aa8d-e1a7bc1e6e97" alt="Example Image" width="800" />
+</p>
+
+1. Click "Select native video folder" and click on the folder which contains native images
+2. Click "Select upscaled video folder" and click on the folder which contains native images
+3. Chose the sampling interval (if the video is in 30 fps, 2 means only 2 sample are taken each second, the 15th and the 30th frame)
+4. Click on the comparison method that we want, wait till it finishes (might take minutes) and the result should appear
+5. The result will provide the average values of (PSNR, SSIM, or LPIPS) for each second
+
+<p align="center">
+  <img src="https://github.com/yudhistiraindyka/VisualFidelityMetric/assets/33085123/fffd8997-5342-4d99-9ddd-38fe6b0777e9" alt="Example Image" width="800" />
+</p>
+
+## Contributing
+Contributions are welcome! Please follow these steps to contribute:
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/YourFeature).
+3. Commit your changes (git commit -m 'Add some feature').
+4. Push to the branch (git push origin feature/YourFeature).
+5. Open a pull request.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yudhistiraindyka/VisualFidelityMetric/blob/master/LICENSE) file for details.
+
+## Contact
+For any questions or suggestions, please contact:
+
+Yudhistira Indyka - yudhistira.indyka@protonmail.com
+
+## Acknowledgements
+- Special thanks to the engineers that came up with PSNR, SSIM, and LPIPS method for image comparison.
+- Thanks to VSCode, NumPy, PyTorch, and Python for providing a thorough documentation.
