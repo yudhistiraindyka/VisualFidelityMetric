@@ -143,7 +143,7 @@ Contributions are welcome! Please follow these steps to contribute:
 5. Open a pull request.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/yudhistiraindyka/VisualFidelityMetric/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 For any questions or suggestions, please contact:
