@@ -7,7 +7,7 @@ class VideoFrameExtractorApp:
     def __init__(self, master):
         self.master = master
         self.master.title("Video Frame Extractor")
-        self.master.geometry("400x150")
+        self.master.geometry("400x200")
 
         # Variables to store video path
         self.video_path = ""
@@ -27,6 +27,10 @@ class VideoFrameExtractorApp:
         # Extract frames button
         self.extract_frames_button = tk.Button(master, text="Extract Frames", command=self.extract_frames)
         self.extract_frames_button.grid(row=1, column=0, columnspan=3, padx=5, pady=5)
+
+        # Progress label
+        self.progress_label = tk.Label(master, text="Frames extracted: 0")
+        self.progress_label.grid(row=2, column=0, columnspan=3, padx=5, pady=5)
 
     def browse_video(self):
         video_path = filedialog.askopenfilename(filetypes=[("Video Files", "*.mp4;*.avi;*.mkv")])
@@ -71,8 +75,9 @@ class VideoFrameExtractorApp:
             frame_path = os.path.join(output_folder, f"frame_{current_frame}.jpg")
             cv2.imwrite(frame_path, frame)
 
-            # Display progress
-            print(f"Extracting frame {current_frame + 1}/{total_frames}")
+            # Update progress label
+            self.progress_label.config(text=f"Frames extracted: {current_frame + 1}/{total_frames}")
+            self.master.update_idletasks()
 
             current_frame += 1
 
