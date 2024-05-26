@@ -38,7 +38,7 @@ class VideoComparisonApp:
         # OptionMenu for selecting frames per second for sampling
         self.fps_label = tk.Label(self.fps_frame, text="Frames per second for sampling:")
         self.fps_label.pack(side=tk.LEFT, padx=5)
-        self.fps_menu = tk.OptionMenu(self.fps_frame, self.frames_per_second, 2, 5, 10, 15, 30)
+        self.fps_menu = tk.OptionMenu(self.fps_frame, self.frames_per_second, 2, 5, 10, 15, 30, 60)
         self.fps_menu.pack(side=tk.LEFT, padx=5)
 
         # Frame for comparison buttons
