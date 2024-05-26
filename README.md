@@ -152,4 +152,4 @@ Yudhistira Indyka - yudhistira.indyka@protonmail.com
 
 ## Acknowledgements
 - Special thanks to the engineers that came up with PSNR, SSIM, and LPIPS method for image comparison.
-- Thanks to VSCode, NumPy, PyTorch, and Python for providing a thorough documentation.
+- Thanks to VSCode, NumPy, PyTorch, Scikit, and Python for providing a thorough documentation.
