@@ -57,7 +57,6 @@ class VideoComparisonApp:
         self.result_label = tk.Label(master, text="Result: ", wraplength=700, font=("Arial", 12, "bold"))
         self.result_label.pack(pady=10)
 
-
     def select_native(self):
         native_folder = filedialog.askdirectory()
         if native_folder:
@@ -120,7 +119,11 @@ class VideoComparisonApp:
         if len(native_frames) != len(upscaled_frames):
             raise ValueError("Number of frames in Native Video and Upscaled Video folders do not match.")
 
-        frame_rate = 30  
+        # Determine the actual frame rate from the number of frames and duration
+        total_frames = len(native_frames)
+        duration = 20  # Duration in seconds
+        frame_rate = total_frames // duration  # Assuming the number of frames corresponds to the duration
+
         sampling_interval = frame_rate // frames_per_second
 
         metric_values = []
@@ -166,4 +169,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
