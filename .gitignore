@@ -4,7 +4,7 @@ __pycache__/
 venv/
 .env
 .DS_Store
-/Video/
-/NativeVideo/
-/images/
-/UpscaledVideo/
+Video/
+NativeVideo/
+images/
+UpscaledVideo/
