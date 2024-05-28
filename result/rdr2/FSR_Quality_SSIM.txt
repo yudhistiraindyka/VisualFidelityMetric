@@ -1,0 +1,23 @@
+SSIM Values (average values for each second):
+Second 1: 0.7078
+Second 2: 0.8427
+Second 3: 0.8523
+Second 4: 0.8483
+Second 5: 0.8250
+Second 6: 0.8442
+Second 7: 0.7284
+Second 8: 0.7631
+Second 9: 0.7689
+Second 10: 0.7675
+Second 11: 0.8262
+Second 12: 0.8017
+Second 13: 0.8253
+Second 14: 0.7810
+Second 15: 0.8371
+Second 16: 0.8371
+Second 17: 0.8818
+Second 18: 0.8639
+Second 19: 0.8745
+Second 20: 0.8993
+
+Time taken: 37.75 seconds

@@ -1,0 +1,23 @@
+PSNR Values (average values for each second):
+Second 1: 31.4897
+Second 2: 32.0062
+Second 3: 30.9386
+Second 4: 31.2985
+Second 5: 31.2147
+Second 6: 32.8393
+Second 7: 31.1792
+Second 8: 31.4715
+Second 9: 31.4427
+Second 10: 31.2633
+Second 11: 32.0599
+Second 12: 31.4768
+Second 13: 32.4096
+Second 14: 31.6336
+Second 15: 31.8949
+Second 16: 31.5322
+Second 17: 32.0253
+Second 18: 31.3693
+Second 19: 30.5797
+Second 20: 32.3567
+
+Time taken: 5.66 seconds

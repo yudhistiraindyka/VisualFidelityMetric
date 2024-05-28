@@ -1,0 +1,23 @@
+LPIPS Values (average values for each second):
+Second 1: 0.0790
+Second 2: 0.1005
+Second 3: 0.1050
+Second 4: 0.1099
+Second 5: 0.1168
+Second 6: 0.1108
+Second 7: 0.1532
+Second 8: 0.1468
+Second 9: 0.1278
+Second 10: 0.1213
+Second 11: 0.0994
+Second 12: 0.1158
+Second 13: 0.1083
+Second 14: 0.1199
+Second 15: 0.0988
+Second 16: 0.1006
+Second 17: 0.0925
+Second 18: 0.1138
+Second 19: 0.1133
+Second 20: 0.0782
+
+Time taken: 144.84 seconds
