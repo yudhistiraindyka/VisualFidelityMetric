@@ -12,7 +12,7 @@ class VideoComparisonApp:
     def __init__(self, master):
         self.master = master
         self.master.title("Video Comparison")
-        self.master.geometry("800x650")
+        self.master.geometry("800x850")
 
         # Variables to store video folder paths
         self.native_folder = ""
@@ -129,7 +129,7 @@ class VideoComparisonApp:
             raise ValueError("Number of frames in Native Video and Upscaled Video folders do not match.")
 
         total_frames = len(native_frames)
-        duration = 20  # Duration in seconds
+        duration = 30  # Duration in seconds
         frame_rate = total_frames // duration
 
         sampling_interval = frame_rate // frames_per_second
@@ -178,7 +178,7 @@ class VideoComparisonApp:
         self.save_button.pack()
 
     def save_results(self):
-        save_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text file", "*.txt"), ("CSV file", "*.csv")])
+        save_path = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV file", "*.csv"), ("Text file", "*.txt")])
         if save_path:
             with open(save_path, 'w') as file:
                 frames_per_second = self.frames_per_second.get()
@@ -195,8 +195,9 @@ class VideoComparisonApp:
 
                 file.write(f"{self.metric_name.upper()} Values (average values for each second):\n")
                 for i, value in enumerate(avg_values_per_second):
-                    file.write(f"Second {i+1}: {value:.4f}\n")
+                    file.write(f"Second {i+1}, {value:.4f}\n")
                 file.write(f"\nTime taken: {self.elapsed_time:.2f} seconds")
+
 
 def main():
     root = tk.Tk()
