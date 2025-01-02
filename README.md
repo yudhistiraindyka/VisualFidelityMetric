@@ -22,7 +22,7 @@ A program made for comparing images and extracting videos using PSNR, SSIM, and 
 
 Visual Fidelity Metric is a tool designed for comparing images and extracting video frames using three popular metrics:
 - PSNR (Peak Signal-to-Noise Ratio)
-- SSIM (Structural Similarity Index)
+- SSIM (Structural Similarity Index Measure)
 - LPIPS (Learned Perceptual Image Patch Similarity)
 
 This tool helps in assessing the quality and fidelity of images and videos by providing quantitative comparisons through a user-friendly GUI.
